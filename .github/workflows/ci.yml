@@ -18,7 +18,7 @@ jobs:
         echo "[ui]\ntls = False" > $HOME/.hgrc
 
         # Use cask to install development dependencies
-        curl -fsSkL https://raw.github.com/cask/cask/master/go | python
+        git clone --depth=1 --single-branch https://github.com/cask/cask ~/.cask
     - name: Run cask
       run: |
         ~/.cask/bin/cask
